@@ -128,3 +128,19 @@ Use the tool 'iw', please don't use other tools like 'airmon-ng'
 iw dev wlan0 set monitor none
 ```
 
+# Steps:
+## 1. Doload the file and save it in the Ubuntu setup disk
+## 2. Install make, gcc according to the websit: https://blog.csdn.net/qyb19970829/article/details/109596767
+remember to install pool/main/g/gcc-defacuts/gcc_7.074.0-1ubuntu2.3_amd64.deb
+
+## 3. cd to rtl8821CU file, and then run
+```
+make
+sudo make install
+```
+## 4. run
+```
+sudo usb_modeswitch -KW -v 0bda -p 1a2b
+systemctl start bluetooth.service 
+```
+ 
